@@ -42,7 +42,7 @@
   },
   "extra": {
     "name": "Mailjet",
-    "handle": "mailjet",
+    "handle": "mailjet-adapter",
     "documentationUrl": "https://github.com/robuust/craft-mailjet/blob/v1/README.md"
   },
   "scripts": {
