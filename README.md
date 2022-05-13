@@ -26,7 +26,7 @@ cd /path/to/my-project.test
 composer require robuust/craft-mailjet
 
 # tell Craft to install the plugin
-./craft install/plugin mailjet
+./craft install/plugin mailjet-adapter
 ```
 
 ## Setup
