@@ -31,6 +31,6 @@ composer require robuust/craft-mailjet
 
 ## Setup
 
-Once Mailjet is installed, go to Settings → Email, and change the “Transport Type” setting to “Mailjet”. Enter your domain name and Mailjet API Key (which you can get from your [domain overview](https://mailjet.com/app/domains) page) and click Save.
+Once Mailjet is installed, go to Settings → Email, and change the “Transport Type” setting to “Mailjet”. Enter your Mailjet API Key and API Secret and click Save.
 
-> **Tip:** The Domain, API Key, and Endpoint settings can be set to environment variables. See [Environmental Configuration](https://docs.craftcms.com/v3/config/environments.html) in the Craft docs to learn more about that.
+> **Tip:** The API Key and API Secret settings can be set to environment variables. See [Environmental Configuration](https://docs.craftcms.com/v3/config/environments.html) in the Craft docs to learn more about that.
