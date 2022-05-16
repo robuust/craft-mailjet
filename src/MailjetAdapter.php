@@ -75,7 +75,7 @@ class MailjetAdapter extends BaseTransportAdapter
      */
     public function getSettingsHtml(): ?string
     {
-        return Craft::$app->getView()->renderTemplate('mailjet/settings', [
+        return Craft::$app->getView()->renderTemplate('mailjet-adapter/settings', [
             'adapter' => $this,
         ]);
     }
