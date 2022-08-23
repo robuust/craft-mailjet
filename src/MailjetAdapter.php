@@ -55,8 +55,8 @@ class MailjetAdapter extends BaseTransportAdapter
     public function attributeLabels()
     {
         return [
-            'apiKey' => Craft::t('mailjet', 'API Key'),
-            'apiSecret' => Craft::t('mailjet', 'API Secret'),
+            'apiKey' => Craft::t('mailjet-adapter', 'API Key'),
+            'apiSecret' => Craft::t('mailjet-adapter', 'API Secret'),
         ];
     }
 
