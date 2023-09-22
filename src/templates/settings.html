@@ -21,3 +21,11 @@
   value: adapter.apiSecret,
   errors: adapter.getErrors('apiSecret')
 }) }}
+
+{{ forms.booleanMenuField({
+  label: "Use Sandbox Mode"|t('mailjet-adapter'),
+  id: 'useSandboxMode',
+  name: 'useSandboxMode',
+  includeEnvVars: true,
+  value: adapter.useSandboxMode
+}) }}

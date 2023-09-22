@@ -34,6 +34,24 @@ class MailjetAdapter extends BaseTransportAdapter
     public string $apiSecret = '';
 
     /**
+     * @var bool|string|null Whether to use sandbox mode
+     */
+    public bool|string|null $useSandboxMode = null;
+
+    /**
+     * @inheritdoc
+     */
+    public function __construct($config = [])
+    {
+        // Config normalization
+        if (($config['useSandboxMode'] ?? null) === '') {
+            unset($config['useSandboxMode']);
+        }
+
+        parent::__construct($config);
+    }
+
+    /**
      * @inheritdoc
      */
     public function behaviors(): array
@@ -44,6 +62,7 @@ class MailjetAdapter extends BaseTransportAdapter
             'attributes' => [
                 'apiKey',
                 'apiSecret',
+                'useSandboxMode',
             ],
         ];
         return $behaviors;
@@ -57,6 +76,7 @@ class MailjetAdapter extends BaseTransportAdapter
         return [
             'apiKey' => Craft::t('mailjet-adapter', 'API Key'),
             'apiSecret' => Craft::t('mailjet-adapter', 'API Secret'),
+            'useSandboxMode' => Craft::t('mailjet-adapter', 'Use Sandbox Mode'),
         ];
     }
 
@@ -85,6 +105,6 @@ class MailjetAdapter extends BaseTransportAdapter
      */
     public function defineTransport(): array|\Symfony\Component\Mailer\Transport\AbstractTransport
     {
-        return new MailjetApiTransport(App::parseEnv($this->apiKey), App::parseEnv($this->apiSecret));
+        return new MailjetApiTransport(App::parseEnv($this->apiKey), App::parseEnv($this->apiSecret), sandbox: App::parseBooleanEnv($this->useSandboxMode));
     }
 }
