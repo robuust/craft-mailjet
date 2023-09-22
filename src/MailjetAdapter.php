@@ -38,6 +38,9 @@ class MailjetAdapter extends BaseTransportAdapter
      */
     public bool|string|null $useSandboxMode = null;
 
+    /**
+     * @inheritdoc
+     */
     public function __construct($config = [])
     {
         // Config normalization
