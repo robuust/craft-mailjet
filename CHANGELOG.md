@@ -1,5 +1,10 @@
 # Release Notes for Mailjet for Craft CMS
 
+## 1.0.4 - 2023-09-25
+
+### Fixed
+- Fixed error when sandbox mode was null
+
 ## 1.0.3 - 2023-09-22
 
 ### Added

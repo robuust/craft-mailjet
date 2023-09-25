@@ -34,22 +34,9 @@ class MailjetAdapter extends BaseTransportAdapter
     public string $apiSecret = '';
 
     /**
-     * @var bool|string|null Whether to use sandbox mode
+     * @var bool Whether to use sandbox mode
      */
-    public bool|string|null $useSandboxMode = null;
-
-    /**
-     * @inheritdoc
-     */
-    public function __construct($config = [])
-    {
-        // Config normalization
-        if (($config['useSandboxMode'] ?? null) === '') {
-            unset($config['useSandboxMode']);
-        }
-
-        parent::__construct($config);
-    }
+    public bool $useSandboxMode = false;
 
     /**
      * @inheritdoc
