@@ -6,7 +6,7 @@ This plugin provides a [Mailjet](http://www.mailjet.com/) integration for [Craft
 
 ## Requirements
 
-This plugin requires Craft CMS 4.0 or later.
+This plugin requires Craft CMS 5.0 or later.
 
 You can install this plugin from the Plugin Store or with Composer.
 
