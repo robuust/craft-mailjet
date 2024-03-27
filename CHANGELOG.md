@@ -1,5 +1,10 @@
 # Release Notes for Mailjet for Craft CMS
 
+## 2.0.1 - 2024-03-27
+
+### Changed
+- Require Craft 5 stable
+
 ## 2.0.0 - 2024-03-01
 
 ### Added

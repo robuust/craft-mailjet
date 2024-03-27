@@ -26,8 +26,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^8.3.0",
-    "craftcms/cms": "^5.0.x-dev",
+    "php": "^8.2.0",
+    "craftcms/cms": "^5.0",
     "symfony/mailjet-mailer": "^7.0"
   },
   "require-dev": {
@@ -52,7 +52,7 @@
   },
   "config": {
     "platform": {
-      "php": "8.3.0"
+      "php": "8.2.0"
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true,
