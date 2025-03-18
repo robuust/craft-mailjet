@@ -7,6 +7,7 @@ use craft\behaviors\EnvAttributeParserBehavior;
 use craft\helpers\App;
 use craft\mail\transportadapters\BaseTransportAdapter;
 use Symfony\Component\Mailer\Bridge\Mailjet\Transport\MailjetApiTransport;
+use Symfony\Component\HttpClient\HttpClient;
 
 /**
  * MailjetAdapter implements a Mailjet transport adapter into Craft’s mailer.
@@ -92,6 +93,11 @@ class MailjetAdapter extends BaseTransportAdapter
      */
     public function defineTransport(): array|\Symfony\Component\Mailer\Transport\AbstractTransport
     {
-        return new MailjetApiTransport(App::parseEnv($this->apiKey), App::parseEnv($this->apiSecret), sandbox: App::parseBooleanEnv($this->useSandboxMode));
+        return new MailjetApiTransport(
+            App::parseEnv($this->apiKey),
+            App::parseEnv($this->apiSecret),
+            HttpClient::create(['http_version' => '1.1']),
+            sandbox: App::parseBooleanEnv($this->useSandboxMode)
+        );
     }
 }

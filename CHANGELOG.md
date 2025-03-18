@@ -1,5 +1,10 @@
 # Release Notes for Mailjet for Craft CMS
 
+## 2.0.2 - 2025-03-18
+
+### Fixed
+- Always use HTTP 1.1 for sending mails because Mailjet API has issues with HTTP 2.0
+
 ## 2.0.1 - 2024-03-27
 
 ### Changed
