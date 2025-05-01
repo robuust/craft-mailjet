@@ -1,5 +1,11 @@
 # Release Notes for Mailjet for Craft CMS
 
+## 2.0.3 - 2025-05-01
+
+### Changed
+- Revert using HTTP 1.1
+- Updated dependencies
+
 ## 2.0.2 - 2025-03-18
 
 ### Fixed

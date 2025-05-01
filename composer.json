@@ -35,6 +35,9 @@
     "craftcms/phpstan": "dev-main",
     "craftcms/rector": "dev-main"
   },
+  "suggest": {
+    "amphp/http-client": "Uses AMP HTTP Client for async requests"
+  },
   "autoload": {
     "psr-4": {
       "robuust\\mailjet\\": "src/"
