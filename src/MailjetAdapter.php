@@ -96,6 +96,7 @@ class MailjetAdapter extends BaseTransportAdapter
         return new MailjetApiTransport(
             App::parseEnv($this->apiKey),
             App::parseEnv($this->apiSecret),
+            HttpClient::create(['max_duration' => 15]),
             sandbox: App::parseBooleanEnv($this->useSandboxMode)
         );
     }
