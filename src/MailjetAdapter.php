@@ -35,9 +35,9 @@ class MailjetAdapter extends BaseTransportAdapter
     public string $apiSecret = '';
 
     /**
-     * @var bool Whether to use sandbox mode
+     * @var bool|string Whether to use sandbox mode
      */
-    public bool $useSandboxMode = false;
+    public bool|string $useSandboxMode = false;
 
     /**
      * @inheritdoc

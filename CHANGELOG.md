@@ -1,5 +1,10 @@
 # Release Notes for Mailjet for Craft CMS
 
+## 2.0.4 - 2025-12-12
+
+### Fixed
+- Fixed inability to use env variables for sandbox mode
+
 ## 2.0.3 - 2025-05-01
 
 ### Changed
